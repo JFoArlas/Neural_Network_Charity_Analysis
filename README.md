@@ -11,9 +11,7 @@ The purpose of this analysis was to help a foundation predict where to make inve
   - The remaining columns are considered to be the features for the model.
 
 - Compiling, Training, and Evaluating the Model
-  - My original model was made up of 2 hidden layers, one with 80 neurons and one with 30 neurons. I used the ReLU activation function for the hidden layers and the Sigmoid activation function for the output layer:
-
-
+  - My original model was made up of 2 hidden layers, one with 80 nodes and one with 30 nodes. I used the ReLU activation function for the hidden layers and the Sigmoid activation function for the output layer:
   
   ```
   # Define the model - deep neural net, i.e., the number of input features and hidden nodes for each layer.
@@ -33,8 +31,8 @@ The purpose of this analysis was to help a foundation predict where to make inve
   nn.add(tf.keras.layers.Dense(units=1, activation="sigmoid"))
   ```
   
-  - I was not able to achieve the target model performance.
-  - To try and increase model performance I adjusted the number of epochs, added an additional hidden layer, and adjusted the number of neurons in each layer.
+  - I was not able to achieve the target model performance of 75% after 3 attempts of optimizing this model.
+  - To try and increase model performance I adjusted the number of epochs, tested another activation function, added an additional hidden layer, and adjusted the number of nodes in each layer.
 
 ## Summary
 The original model resulted in **72.39% accuracy**.
@@ -44,3 +42,5 @@ The original model resulted in **72.39% accuracy**.
 2. In my second attempt to optimize the model I kept three hidden layers and adjusted the nodes to 80, 30, and 10 respectively. I also decreased the epochs back to 100 and changed the activation function for the hidden layers from ReLU to tanh. All of this resulted in **72.57% accuracy**, which was just slightly lower than the first attempt but still a bit higher than original model.
 
 3. In my third attempt to optimize the model I again kept the three hidden layers and adjusted the nodes in the first layer to 50, keeping 30 and 10 nodes in the second and third layers respectively. I also kept 100 epochs and changed the activation function for the hidden layers back to ReLU since the first attempt was more successful with that than with tanh. All of this resulted in **74.17% accuracy**, which was the highest I was able to achieve.
+
+Since we're attempting binary classification and neural networks did not achieve the 75% goal, I reccomend using a supervised machine learning model like Logistic Regression, SVM, or Decision Trees instead.
