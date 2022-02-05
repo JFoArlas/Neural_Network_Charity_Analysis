@@ -1,17 +1,18 @@
 # Neural Network Charity Analysis
 
-## Overview of the analysis: Explain the purpose of this analysis.
+## Overview
+The purpose of this analysis was to help a foundation predict where to make investments by using machine learning and neural networks. To do this, we were given a CSV containing more than 34,000 organizations that have received funding over the years. We were then tasked with creating a binary classifier capable of predicting whether applicants will be successful if funded.
 
-## Results: Using bulleted lists and images to support your answers, address the following questions.
+## Results
 
 - Data Preprocessing
-  - What variable(s) are considered the target(s) for your model?
-  - What variable(s) are considered to be the features for your model?
-  - What variable(s) are neither targets nor features, and should be removed from the input data?
+  - The `IS_SUCCESSFUL` column is considered the target for the model
+  - The `EIN` and `NAME` columns are neither targets nor features, and were therefore removed from the input data
+  - The remaining columns are considered to be the features for the model
 
 - Compiling, Training, and Evaluating the Model
-  - How many neurons, layers, and activation functions did you select for your neural network model, and why?
-  - Were you able to achieve the target model performance?
+  - My original model was made up of neurons, layers, and activation functions did you select for your neural network model, and why?
+  - I as not able to achieve the target model performance
   - What steps did you take to try and increase model performance?
 
 ## Summary
